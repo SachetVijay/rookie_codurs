@@ -30,19 +30,12 @@ function First() {
             <h2>Sreach Alumni</h2>
           </div>
           <div className="input_search_alumni">
-            {/* <div>
-              <label>Student Id</label>
-<<<<<<< HEAD
-              <input type="text" className="search_alm_inp"></input>
-            </div> */}
-||||||| 0f7a8c5
-              <input type="text"></input>
-            </div>
-=======
+              {/* <input type="text"></input>
+
               <input type="text"
               className="searchBar" onChange={(event) => setValue(event.target.value)} value={value}></input>
-            </div>
->>>>>>> 53e5755c32ff16a685392f2ee1b60abb77a5865b
+            </div> */}
+
             <div>
               <label>Batch</label>
               <input type="number" className="search_alm_inp"></input>
