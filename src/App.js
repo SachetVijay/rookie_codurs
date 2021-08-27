@@ -4,13 +4,30 @@ import "./App.css";
 import Chat from "./myComponents/Chat";
 import First from "./myComponents/first_page";
 import Login from "./myComponents/Login";
+import Search from "./myComponents/Search";
 import SideBar from "./myComponents/SideBar";
 
 function App() {
   const [user, setUser] = useState(true);
   return (
     <div className="App">
-      <First />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <First />
+          </Route>
+
+          <Route exact path="/register">
+            {" "}
+          </Route>
+          <Route exact path="/login">
+            {" "}
+          </Route>
+          <Route exact path="/search">
+            <Search />
+          </Route>
+        </Switch>
+      </Router>
       {/* <div className="app_body"> */}
       {/* <Router>
         <Switch>

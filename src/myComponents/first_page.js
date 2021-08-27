@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./firstPage.css";
 function First() {
   return (
@@ -51,7 +52,9 @@ function First() {
               <input type="text"></input>
             </div>
             <div className="alumni_search">
-              <button>search</button>
+              <button onClick={()=>window.location.assign("/search")}>
+                search
+              </button>
             </div>
           </div>
         </div>
