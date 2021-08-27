@@ -7,6 +7,8 @@ import Login from "./myComponents/Login";
 import Search from "./myComponents/Search";
 import SideBar from "./myComponents/SideBar";
 
+import Profile from "./myComponents/profile";
+
 function App() {
   const [user, setUser] = useState(true);
   return (
@@ -16,7 +18,9 @@ function App() {
           <Route exact path="/">
             <First />
           </Route>
-
+          <Route exact path="/profile">
+              <Profile/>
+          </Route>
           <Route exact path="/register">
             {" "}
           </Route>
