@@ -1,7 +1,13 @@
 import React from "react";
+import {useState,useEffect} from 'react';
 import { Link } from "react-router-dom";
 import "./firstPage.css";
 function First() {
+  const [value, setValue]=useState('');
+  const submit=()=> {
+    localStorage.setItem("id",value);
+    window.location.assign('/search')
+  }
   return (
     <div class="first_body">
       <div className="welcome_first">
@@ -26,8 +32,17 @@ function First() {
           <div className="input_search_alumni">
             {/* <div>
               <label>Student Id</label>
+<<<<<<< HEAD
               <input type="text" className="search_alm_inp"></input>
             </div> */}
+||||||| 0f7a8c5
+              <input type="text"></input>
+            </div>
+=======
+              <input type="text"
+              className="searchBar" onChange={(event) => setValue(event.target.value)} value={value}></input>
+            </div>
+>>>>>>> 53e5755c32ff16a685392f2ee1b60abb77a5865b
             <div>
               <label>Batch</label>
               <input type="number" className="search_alm_inp"></input>
@@ -37,7 +52,7 @@ function First() {
               <input type="text" className="search_alm_inp"></input>
             </div>
             <div className="alumni_search">
-              <button onClick={()=>window.location.assign("/search")}>
+              <button onClick={submit}>
                 search
               </button>
             </div>
