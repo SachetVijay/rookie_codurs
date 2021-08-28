@@ -16,6 +16,9 @@ function Profile(){
                                    </h3>
                                </div>
                     </div>
+                    <div className="line_profile">
+
+                    </div>
                     <div className="profile_dis">
                             <div className="profile_name">
                                 <div>
@@ -81,7 +84,9 @@ function Profile(){
                             Amazon,Apple, google, microsoft and Adobe.
                             </h4>
                         </div>
-
+                        <div className="profile_button">
+                        <button>Back</button>
+                        </div>
                 </div>
         </div>
     )
