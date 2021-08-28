@@ -1,11 +1,11 @@
 import React, {useState,useEffect} from 'react';
-function Search() {
-  const [value, setValue]=useState(localStorage.getItem('id'));
-  const [result, setResult]=useState([]);
 
+function Search() {
+  const [result, setResult]=useState([]);
+  const [value, setValue]=useState(localStorage.getItem('id'));
     useEffect(() =>{
       if(value.length >0){
-        fetch('https://hackout-815ba-default-rtdb.firebaseio.com/').then(
+        fetch('https://hackout-815ba-default-rtdb.firebaseio.com/main.json').then(
         response => response.json()
       ).then(responseData =>{
         setResult([]);
@@ -25,11 +25,17 @@ function Search() {
       setResult([]);
     }
   },[value])
-    return (
-        <div>
-dsdsda
-        </div>
-    )
-}
+  return (
+      <div>
+{result.map((result,index) =>(
+<a href="#" key={index}>
+<div>
+{result}
+</div>
+</a>
+))}
+    </div>
+  );
+  }
 
 export default Search

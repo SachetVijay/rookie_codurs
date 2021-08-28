@@ -30,19 +30,17 @@ function First() {
             <h2>Sreach Alumni</h2>
           </div>
           <div className="input_search_alumni">
-              {/* <input type="text"></input>
-
-              <input type="text"
-              className="searchBar" onChange={(event) => setValue(event.target.value)} value={value}></input>
-            </div> */}
-
             <div>
               <label>Batch</label>
               <input type="number" className="search_alm_inp"></input>
             </div>
             <div>
               <label>Name</label>
-              <input type="text" className="search_alm_inp"></input>
+
+            </div>
+            <div>
+            <input type="text"
+           className="search_alm_inp" onChange={(event) => setValue(event.target.value)} value={value}></input>
             </div>
             <div className="alumni_search">
               <button onClick={submit}>
