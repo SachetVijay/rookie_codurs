@@ -6,6 +6,7 @@ import First from "./myComponents/first_page";
 import Login from "./myComponents/Login";
 import Search from "./myComponents/Search";
 import SideBar from "./myComponents/SideBar";
+import StudentInfo from "./myComponents/StudentInfo";
 
 function App() {
   const [user, setUser] = useState(true);
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/search">
             <Search />
           </Route>
+          <Route path="/student"><StudentInfo/></Route>
         </Switch>
       </Router>
       {/* <div className="app_body"> */}
