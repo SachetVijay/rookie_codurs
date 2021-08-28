@@ -16,6 +16,7 @@ font-family: 'Roboto', sans-serif; */
   background-image: radial-gradient(#474545 0.5px, rgb(31, 31, 31) 0.5px);
   background-position: 0 0, 10px 10px;
   opacity: 1;
+  position: relative;
 }
 .welcome_first {
   width: 100vw;
@@ -29,71 +30,59 @@ font-family: 'Roboto', sans-serif; */
   /* background-image: url(https://images.unsplash.com/photo-1462536943532-57a629f6cc60?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbGxlZ2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
     background-repeat: no-repeat; */
   position: relative;
-  background-size: cover;
   background-image: radial-gradient(#474545 0.5px, rgb(31, 31, 31) 0.5px);
   background-position: 0 0, 10px 10px;
+  background-image: url(https://images.unsplash.com/photo-1462536943532-57a629f6cc60?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbGxlZ2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
+  background-image: url(https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   opacity: 1;
 }
 .welcome_first_nav {
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  max-width: 100vw;
-  height: 80px;
-  background: rgb(17, 17, 17);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.welcome_first_nav div {
+  z-index: 2;
+  width: 50px;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  background: rgb(255, 208, 53);
+  background: #293250;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 5px;
-  font-size: 40px;
-  width: 20vw;
-  color: rgb(247, 255, 154);
+  border-radius: 4px;
+}
+.welcome_first_nav div {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  width: 50px;
+  width: 100%;
+  background: transparent;
+  transition: all 300ms ease;
+  color: rgb(0, 0, 0);
+  color: rgb(35, 196, 59);
+}
+.welcome_first_nav div:hover{
+  background: rgb(35, 196, 59);
+  color: #293250;
 }
 .welcome_first_nav div i {
   cursor: pointer;
 }
 .welcome_first h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 35px;
+  font-size: 38px;
   margin-top: 15px;
   text-align: center;
   position: relative;
-  color: white;
-}
-.instruction_first {
-  position: relative;
-  width: 80vw;
-  height: 100%;
-  max-width: 80vw;
-  border-radius: 5px;
-  border: 2px solid rgba(255, 255, 255, 0.158);
-  margin-top: 20px;
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.instruction_first h3 {
-  color: rgba(206, 206, 206, 0.63);
-  font-size: 25px;
-  font-family: "Roboto", sans-serif;
-}
-.instruction_first ol {
-  font-size: 18px;
-  color: rgba(219, 219, 219, 0.726);
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-}
-.instruction_first ol li:last-child {
-  margin-top: 5px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2.5px 2px rgba(0, 0, 0, 0.281);
 }
 
 .second_first {
@@ -168,9 +157,9 @@ font-family: 'Roboto', sans-serif; */
   border: 3px solid #ffffff73;
 }
 .input_search_alumni div input:focus {
-  border: 3px solid #d6ed17ff;
+  border: 3px solid #542bb3;
 }
-.alumni_search button {
+.alumni_search button{
   width: 150px;
   height: 40px;
   margin-top: 40px;
@@ -178,22 +167,22 @@ font-family: 'Roboto', sans-serif; */
   border-radius: 4px;
   outline: none;
   border: none;
-  background: #d6ed17ff;
+  background: #5118d4;
   font-size: 18px;
-  color: rgb(66, 66, 66);
+  color: #d9b9ff;
   font-weight: 400;
   transition: all 400ms ease;
   text-transform: uppercase;
 }
 .alumni_search button:hover {
-  background: rgba(216, 237, 23, 0.24);
+  background: #18004e;
   color: rgb(255, 255, 255);
 }
 
 .alumni_section {
   width: 80vw;
   max-width: 80vw;
-  border: 1.5px solid white;
+  border: 2px solid rgb(128, 128, 128);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -220,17 +209,17 @@ font-family: 'Roboto', sans-serif; */
 .cc button {
   margin: 20px;
 }
-@media only screen and (max-width: 320px) {
-  .welcome_first_nav {
-    position: relative;
-  }
-}
 
 @media only screen and (max-width: 600px) {
-  .welcome_first_nav {
-    height: 50px;
+  .welcome_first_nav{
+    width: 35px;
   }
-  .welcome_first_nav div i {
+  .welcome_first_nav div i{
     font-size: 20px;
+  }
+}
+@media only screen and (max-width: 800px){
+  .input_search_alumni div .search_alm_inp{
+    width: 60vw;
   }
 }

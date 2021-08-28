@@ -8,6 +8,9 @@ import Search from "./myComponents/Search";
 import SideBar from "./myComponents/SideBar";
 import StudentInfo from "./myComponents/StudentInfo";
 
+import Profile from "./myComponents/Profile_for_viewer";
+import Profilealumni from "./myComponents/Profile_for_alumni";
+
 function App() {
   const [user, setUser] = useState(true);
   return (
@@ -17,7 +20,12 @@ function App() {
           <Route exact path="/">
             <First />
           </Route>
-
+          <Route exact path="/profile">
+              <Profile/>
+          </Route>
+          <Route exact path="/profilealumni">
+              <Profilealumni />
+          </Route>
           <Route exact path="/register">
             {" "}
           </Route>
